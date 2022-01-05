@@ -2,8 +2,7 @@ name: Publish QPM Package
 
 env:
     ndkname: android-ndk-r22
-    module_id: scoresaberui
-    qmodName: ScoreSaberUI
+    module_id: gif-lib
     
 on:
   push:

@@ -1,0 +1,15 @@
+{
+  "sharedDir": "shared",
+  "dependenciesDir": "extern",
+  "info": {
+    "name": "GIFLIB",
+    "id": "gif-lib",
+    "version": "5.2.1",
+    "url": null,
+    "additionalData": {
+      "overrideSoName": "libgif-lib.so"
+    }
+  },
+  "dependencies": [],
+  "additionalData": {}
+}

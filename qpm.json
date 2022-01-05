@@ -4,8 +4,8 @@
   "info": {
     "name": "GIFLIB",
     "id": "gif-lib",
-    "version": "5.2.1",
-    "url": null,
+    "version": "0.1.0",
+    "url": "https://github.com/RedBrumbler/gif-lib-QPM",
     "additionalData": {
       "overrideSoName": "libgif-lib.so"
     }

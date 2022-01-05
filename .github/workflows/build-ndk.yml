@@ -74,10 +74,6 @@ jobs:
       run: |
         ./QPM/qpm-rust restore
 
-    - name: Apply Legacy fix
-      run: |
-        ./QPM/qpm-rust cache legacy-fix
-
     - name: Build
       run: |
         cd ${GITHUB_WORKSPACE}

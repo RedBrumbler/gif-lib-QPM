@@ -26,7 +26,7 @@ RECURSE_FILES(c_file_list ${SOURCE_DIR}/*.c)
 # add all src files to compile
 add_library(
     ${COMPILE_ID} 
-    SHARED 
+    STATIC 
     ${cpp_file_list}
     ${c_file_list}
 )
@@ -44,7 +44,7 @@ include(extern.cmake)
 
 add_custom_command(TARGET ${COMPILE_ID} POST_BUILD
             COMMAND ${CMAKE_STRIP} -g -S -d --strip-all
-            "lib${COMPILE_ID}.so" -o "stripped_lib${COMPILE_ID}.so"
+            "lib${COMPILE_ID}.a" -o "stripped_lib${COMPILE_ID}.a"
             COMMENT "Strip debug symbols done on final binary.")
         
 add_custom_command(TARGET ${COMPILE_ID} POST_BUILD
@@ -53,11 +53,11 @@ add_custom_command(TARGET ${COMPILE_ID} POST_BUILD
         )
 
 add_custom_command(TARGET ${COMPILE_ID} POST_BUILD
-            COMMAND ${CMAKE_COMMAND} -E rename lib${COMPILE_ID}.so debug/lib${COMPILE_ID}.so
+            COMMAND ${CMAKE_COMMAND} -E rename lib${COMPILE_ID}.a debug/lib${COMPILE_ID}.a
             COMMENT "Rename the lib to debug_ since it has debug symbols"
             )
 
 add_custom_command(TARGET ${COMPILE_ID} POST_BUILD
-            COMMAND ${CMAKE_COMMAND} -E rename stripped_lib${COMPILE_ID}.so lib${COMPILE_ID}.so
+            COMMAND ${CMAKE_COMMAND} -E rename stripped_lib${COMPILE_ID}.a lib${COMPILE_ID}.a
             COMMENT "Rename the stripped lib to regular"
             )

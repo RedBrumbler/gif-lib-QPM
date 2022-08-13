@@ -4,11 +4,11 @@
   "info": {
     "name": "GIFLIB",
     "id": "gif-lib",
-    "version": "0.1.0",
+    "version": "5.2.2",
     "url": "https://github.com/RedBrumbler/gif-lib-QPM",
     "additionalData": {
-      "overrideSoName": "libgif-lib.a",
-      "staticLinking": true 
+      "staticLinking": true,
+      "overrideSoName": "libgif-lib.a"
     }
   },
   "dependencies": [],

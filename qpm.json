@@ -8,7 +8,10 @@
     "url": "https://github.com/RedBrumbler/gif-lib-QPM",
     "additionalData": {
       "staticLinking": true,
-      "overrideSoName": "libgif-lib.a"
+      "soLink": "https://github.com/RedBrumbler/gif-lib-QPM/releases/download/v5.2.2/libgif-lib.a",
+      "debugSoLink": "https://github.com/RedBrumbler/gif-lib-QPM/releases/download/v5.2.2/debug_libgif-lib.a",
+      "overrideSoName": "libgif-lib.a",
+      "branchName": "version-v5.2.2"
     }
   },
   "dependencies": [],
